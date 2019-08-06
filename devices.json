@@ -1,0 +1,498 @@
+[
+      {
+          "Brand": "Phone/Apple",
+          "Model": "iPhone XR",
+          "Viewport": "414x896",
+          "Resolution": "828x1792",
+          "D.size": "6.1 inch",
+          "DPI": 326
+      },
+      {
+          "Brand": "Phone/Apple",
+          "Model": "iPhone XS Max",
+          "Viewport": "414x896",
+          "Resolution": "1242x2688",
+          "D.size": "6.5 inch",
+          "DPI": 458
+      },
+      {
+          "Brand": "Phone/Apple",
+          "Model": "iPhone XS",
+          "Viewport": "375x812",
+          "Resolution": "1125x2436",
+          "D.size": "5.8 inch",
+          "DPI": 458
+      },
+      {
+          "Brand": "Phone/Apple",
+          "Model": "iPhone X",
+          "Viewport": "375x812",
+          "Resolution": "1125x2436",
+          "D.size": "5.8 inch",
+          "DPI": 463
+      },
+      {
+          "Brand": "Phone/Apple",
+          "Model": "iPhone 8 Plus",
+          "Viewport": "414x736",
+          "Resolution": "1080x1920",
+          "D.size": "5.5 inch",
+          "DPI": 401
+      },
+      {
+          "Brand": "Phone/Apple",
+          "Model": "iPhone 8",
+          "Viewport": "375x667",
+          "Resolution": "750x1334",
+          "D.size": "4.7 inch",
+          "DPI": 326
+      },
+      {
+          "Brand": "Phone/Apple",
+          "Model": "iPhone 7 Plus",
+          "Viewport": "414x736",
+          "Resolution": "1080x1920",
+          "D.size": "5.5 inch",
+          "DPI": 401
+      },
+      {
+          "Brand": "Phone/Apple",
+          "Model": "iPhone 7",
+          "Viewport": "375x667",
+          "Resolution": "750x1334",
+          "D.size": "4.7 inch",
+          "DPI": 326
+      },
+      {
+          "Brand": "Phone/Apple",
+          "Model": "iPhone 6S Plus",
+          "Viewport": "414x736",
+          "Resolution": "1080x1920",
+          "D.size": "5.5 inch",
+          "DPI": 401
+      },
+      {
+          "Brand": "Phone/Apple",
+          "Model": "iPhone 6S",
+          "Viewport": "375x667",
+          "Resolution": "750x1334",
+          "D.size": "4.7 inch",
+          "DPI": 326
+      },
+      {
+          "Brand": "Phone/Apple",
+          "Model": "iPhone 6",
+          "Viewport": "375x667",
+          "Resolution": "750x1334",
+          "D.size": "4.7 inch",
+          "DPI": 326
+      },
+      {
+          "Brand": "Phone/Samsung",
+          "Model": "Galaxy S9 Plus",
+          "Viewport": "412x846",
+          "Resolution": "1440x2960",
+          "D.size": "6.2 inch",
+          "DPI": 531
+      },
+      {
+          "Brand": "Phone/Samsung",
+          "Model": "Galaxy S9",
+          "Viewport": "360x740",
+          "Resolution": "1440x2960",
+          "D.size": "5.8 inch",
+          "DPI": 568
+      },
+      {
+          "Brand": "Phone/Samsung",
+          "Model": "Galaxy Note 8",
+          "Viewport": "360x740",
+          "Resolution": "1440x2960",
+          "D.size": "6.3 inch",
+          "DPI": 522
+      },
+      {
+          "Brand": "Phone/Samsung",
+          "Model": "Galaxy S8 Plus",
+          "Viewport": "412x846",
+          "Resolution": "1440x2960",
+          "D.size": "6.2 inch",
+          "DPI": 531
+      },
+      {
+          "Brand": "Phone/Samsung",
+          "Model": "Galaxy S8",
+          "Viewport": "360x740",
+          "Resolution": "1440x2960",
+          "D.size": "5.8 inch",
+          "DPI": 568
+      },
+      {
+          "Brand": "Phone/Samsung",
+          "Model": "Galaxy S7",
+          "Viewport": "360x640",
+          "Resolution": "1440x2560",
+          "D.size": "5.1 inch",
+          "DPI": 576
+      },
+      {
+          "Brand": "Phone/Samsung",
+          "Model": "Galaxy S7 Edge",
+          "Viewport": "360x640",
+          "Resolution": "1440x2560",
+          "D.size": "5.5 inch",
+          "DPI": 534
+      },
+      {
+          "Brand": "Phone/Samsung",
+          "Model": "Galaxy J3",
+          "Viewport": "360x640",
+          "Resolution": "720x1280",
+          "D.size": "5 inch",
+          "DPI": 294
+      },
+      {
+          "Brand": "Phone/Samsung",
+          "Model": "Galaxy J7",
+          "Viewport": "360x640",
+          "Resolution": "720x1280",
+          "D.size": "5.5 inch",
+          "DPI": 267
+      },
+      {
+          "Brand": "Phone/Samsung",
+          "Model": "Galaxy S6",
+          "Viewport": "360x640",
+          "Resolution": "1440x2560",
+          "D.size": "5.1 inch",
+          "DPI": 576
+      },
+      {
+          "Brand": "Phone/Huawei",
+          "Model": "P20 Lite",
+          "Viewport": "360x760",
+          "Resolution": "1080x2280",
+          "D.size": "5.84 inch",
+          "DPI": 432
+      },
+      {
+          "Brand": "Phone/Huawei",
+          "Model": "P20 Pro",
+          "Viewport": "360x747",
+          "Resolution": "1080x2240",
+          "D.size": "6.1 inch",
+          "DPI": 408
+      },
+      {
+          "Brand": "Phone/Huawei",
+          "Model": "P20",
+          "Viewport": "360x748",
+          "Resolution": "1080x2244",
+          "D.size": "5.8 inch",
+          "DPI": 429
+      },
+      {
+          "Brand": "Phone/Huawei",
+          "Model": "P10",
+          "Viewport": "360x640",
+          "Resolution": "1080x1920",
+          "D.size": "5.1 inch",
+          "DPI": 432
+      },
+      {
+          "Brand": "Phone/Huawei",
+          "Model": "P10 Lite",
+          "Viewport": "360x640",
+          "Resolution": "1080x1920",
+          "D.size": "5.2 inch",
+          "DPI": 424
+      },
+      {
+          "Brand": "Phone/Huawei",
+          "Model": "P9",
+          "Viewport": "360x640",
+          "Resolution": "1080x1920",
+          "D.size": "5.2 inch",
+          "DPI": 424
+      },
+      {
+          "Brand": "Phone/Huawei",
+          "Model": "P9 Lite",
+          "Viewport": "360x640",
+          "Resolution": "1080x1920",
+          "D.size": "5.2 inch",
+          "DPI": 424
+      },
+      {
+          "Brand": "Phone/Huawei",
+          "Model": "P8 Lite",
+          "Viewport": "360x640",
+          "Resolution": "1080x1920",
+          "D.size": "5.2 inch",
+          "DPI": 424
+      },
+      {
+          "Brand": "Phone/Motorola",
+          "Model": "Moto Z",
+          "Viewport": "360x640",
+          "Resolution": "1440x2560",
+          "D.size": "5.5 inch",
+          "DPI": 534
+      },
+      {
+          "Brand": "Phone/Motorola",
+          "Model": "Moto E4",
+          "Viewport": "360x640",
+          "Resolution": "720x1280",
+          "D.size": "5 inch",
+          "DPI": 294
+      },
+      {
+          "Brand": "Phone/Motorola",
+          "Model": "Moto Z2",
+          "Viewport": "360x640",
+          "Resolution": "1440x2560",
+          "D.size": "5.5 inch",
+          "DPI": 534
+      },
+      {
+          "Brand": "Phone/Motorola",
+          "Model": "DROID Turbo",
+          "Viewport": "360x640",
+          "Resolution": "1440x2560",
+          "D.size": "5.2 inch",
+          "DPI": 565
+      },
+      {
+          "Brand": "Phone/Motorola",
+          "Model": "Moto Z Play",
+          "Viewport": "360x640",
+          "Resolution": "1080x1920",
+          "D.size": "5.5 inch",
+          "DPI": 401
+      },
+      {
+          "Brand": "Phone/Motorola",
+          "Model": "Moto Z2 Play",
+          "Viewport": "360x640",
+          "Resolution": "1080x1920",
+          "D.size": "5.5 inch",
+          "DPI": 401
+      },
+      {
+          "Brand": "Phone/Motorola",
+          "Model": "Moto G5 Plus",
+          "Viewport": "360x640",
+          "Resolution": "1080x1920",
+          "D.size": "5.2 inch",
+          "DPI": 424
+      },
+      {
+          "Brand": "Phone/Xiaomi",
+          "Model": "Redmi Note 5",
+          "Viewport": "393x786",
+          "Resolution": "1080x2160",
+          "D.size": "6 inch",
+          "DPI": 402
+      },
+      {
+          "Brand": "Phone/Xiaomi",
+          "Model": "Redmi Note 4",
+          "Viewport": "360x640",
+          "Resolution": "1080x1920",
+          "D.size": "5.5 inch",
+          "DPI": 401
+      },
+      {
+          "Brand": "Phone/Xiaomi",
+          "Model": "Redmi Note 3",
+          "Viewport": "360x640",
+          "Resolution": "1080x1920",
+          "D.size": "5.5 inch",
+          "DPI": 401
+      },
+      {
+          "Brand": "Phone/Xiaomi",
+          "Model": "Redmi 4",
+          "Viewport": "360x640",
+          "Resolution": "720x1280",
+          "D.size": "5 inch",
+          "DPI": 294
+      },
+      {
+          "Brand": "Phone/Xiaomi",
+          "Model": "Redmi 4X",
+          "Viewport": "360x640",
+          "Resolution": "720x1280",
+          "D.size": "5 inch",
+          "DPI": 294
+      },
+      {
+          "Brand": "Phone/Google",
+          "Model": "Pixel 3 XL",
+          "Viewport": "393x786",
+          "Resolution": "1440x2880",
+          "D.size": "6 inch",
+          "DPI": 537
+      },
+      {
+          "Brand": "Phone/Google",
+          "Model": "Pixel 3",
+          "Viewport": "393x786",
+          "Resolution": "1080x2160",
+          "D.size": "5.5 inch",
+          "DPI": 439
+      },
+      {
+          "Brand": "Phone/Google",
+          "Model": "Pixel 2",
+          "Viewport": "412x640",
+          "Resolution": "1080x1920",
+          "D.size": "5 inch",
+          "DPI": 441
+      },
+      {
+          "Brand": "Phone/Google",
+          "Model": "Pixel 2 XL",
+          "Viewport": "412x823",
+          "Resolution": "1440x2880",
+          "D.size": "6 inch",
+          "DPI": 537
+      },
+      {
+          "Brand": "Phone/Google",
+          "Model": "Pixel",
+          "Viewport": "360x640",
+          "Resolution": "1080x1920",
+          "D.size": "5 inch",
+          "DPI": 441
+      },
+      {
+          "Brand": "Phone/Google",
+          "Model": "Pixel XL",
+          "Viewport": "411x731",
+          "Resolution": "1440x2560",
+          "D.size": "5.5 inch",
+          "DPI": 534
+      },
+      {
+          "Brand": "Phone/Google",
+          "Model": "Nexus 6",
+          "Viewport": "360x640",
+          "Resolution": "1440x2560",
+          "D.size": "5.96 inch",
+          "DPI": 493
+      },
+      {
+          "Brand": "Phone/Google",
+          "Model": "Nexus 6P",
+          "Viewport": "412x738",
+          "Resolution": "1440x2560",
+          "D.size": "5.7 inch",
+          "DPI": 515
+      },
+      {
+          "Brand": "Phone/Google",
+          "Model": "Nexus 5",
+          "Viewport": "360x640",
+          "Resolution": "1080x1920",
+          "D.size": "4.95 inch",
+          "DPI": 445
+      },
+      {
+          "Brand": "Phone/LG",
+          "Model": "K20",
+          "Viewport": "360x640",
+          "Resolution": "720x1280",
+          "D.size": "5.3 inch",
+          "DPI": 277
+      },
+      {
+          "Brand": "Phone/LG",
+          "Model": "Tribute HD",
+          "Viewport": "360x640",
+          "Resolution": "720x1280",
+          "D.size": "5 inch",
+          "DPI": 294
+      },
+      {
+          "Brand": "Phone/LG",
+          "Model": "Aristo 2",
+          "Viewport": "360x640",
+          "Resolution": "720x1280",
+          "D.size": "5 inch",
+          "DPI": 294
+      },
+      {
+          "Brand": "Phone/LG",
+          "Model": "Stylo 2",
+          "Viewport": "360x640",
+          "Resolution": "720x1280",
+          "D.size": "5.7 inch",
+          "DPI": 258
+      },
+      {
+          "Brand": "Phone/LG",
+          "Model": "V20",
+          "Viewport": "360x640",
+          "Resolution": "1440x2560",
+          "D.size": "5.7 inch",
+          "DPI": 515
+      },
+      {
+          "Brand": "Phone/LG",
+          "Model": "K10",
+          "Viewport": "360x640",
+          "Resolution": "720x1280",
+          "D.size": "5.3 inch",
+          "DPI": 277
+      },
+      {
+          "Brand": "Phone/LG",
+          "Model": "K7",
+          "Viewport": "320x570",
+          "Resolution": "480x854",
+          "D.size": "5 inch",
+          "DPI": 196
+      },
+      {
+          "Brand": "Phone/ZTE",
+          "Model": "ZMAX Pro",
+          "Viewport": "360x640",
+          "Resolution": "1080x1920",
+          "D.size": "6 inch",
+          "DPI": 160
+      },
+      {
+          "Brand": "Phone/ZTE",
+          "Model": "Max XL",
+          "Viewport": "360x640",
+          "Resolution": "1080x1920",
+          "D.size": "6 inch",
+          "DPI": 367
+      },
+      {
+          "Brand": "Phone/ZTE",
+          "Model": "Blade X",
+          "Viewport": "360x640",
+          "Resolution": "720x1280",
+          "D.size": "5.5 inch",
+          "DPI": 233
+      },
+      {
+          "Brand": "Phone/ZTE",
+          "Model": "Majesty Pro",
+          "Viewport": "320x570",
+          "Resolution": "480x854",
+          "D.size": "4.5 inch",
+          "DPI": 218
+      },
+      {
+          "Brand": "Phone/ZTE",
+          "Model": "Maven 3",
+          "Viewport": "320x570",
+          "Resolution": "480x854",
+          "D.size": "5 inch",
+          "DPI": 196
+      }
+    ]

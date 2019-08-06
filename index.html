@@ -1,0 +1,412 @@
+﻿<!DOCTYPE html>
+
+
+<!-- 
+    
+    To Do List:
+
+        1) Overlay for phone
+            a) control key for pinch action combined w/ mouse trigger
+            b) capture all mouse actions and send trigger
+            c) see server for keyboard
+        2) Auto insert at extension level for following:
+            a) CSS for scrollbars
+            b) keyboard for inputs
+        3) add auto to start from viewport index 0 -> index .length to autonavigate all
+        4) Add tablets, etc
+   
+    -->
+
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Device Emulator</title>
+    <style>
+        
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #505050;
+            font-family: Verdana;
+        }
+
+        table.pselect {
+            margin-top: 2em;
+            margin-left: 10%;
+            margin-right: 10%;
+            color: white;
+        }
+
+            table.pselect td {
+                text-align: center;
+            }
+
+                table.pselect td select {
+                    width: 100%;
+                }
+
+                table.pselect td select {
+                    padding: 4px;
+                }
+
+                    table.pselect td select.filter{
+                        background-color: #c0d0e0;
+                    }
+
+                        table.pselect td select.filter option.duplicate {
+                            display: none;
+                        }
+
+                table.pselect td button {
+                    width: 100%;
+                    border: none 0px;
+                    padding: 4px;
+                    margin-top: 10px;
+                }
+                table.pselect td button.selected {
+                    background-color: blue;
+                    color: yellow;
+                    font-weight: bold;
+                }
+        #ifh {
+            position: absolute;
+            top: calc(50% - 20px);
+            left: calc(50% - 20px);
+            width: 40px;
+            height: 40px;
+            outline: 10px black solid;
+        }
+
+            #ifh iframe {
+                height: 100%;
+                width: 100%;
+                border: 0px hidden;
+            }
+
+        .loader-shell {
+            z-index: 9999999999;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            background-color: white;
+            opacity: .75;
+            border: solid 1px black;
+            padding-top: 35vh;
+            cursor: no-drop;
+            display: none;
+        }
+
+        .loader {
+            color: #0000a0;
+            font-size: 90px;
+            text-indent: -9999em;
+            overflow: hidden;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            margin: 72px auto;
+            -webkit-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+            animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+        }
+
+        @-webkit-keyframes load6 {
+            0% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+
+            5%, 95% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+
+            10%, 59% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+            }
+
+            20% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+            }
+
+            38% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+            }
+
+            100% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+        }
+
+        @keyframes load6 {
+            0% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+
+            5%, 95% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+
+            10%, 59% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+            }
+
+            20% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+            }
+
+            38% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+            }
+
+            100% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+        }
+
+        @-webkit-keyframes round {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes round {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div id="jsonLoader" class="loader-shell">
+        <div class=""></div>
+    </div>
+
+
+    <!-- Setup -->
+    <table class="pselect" style="width:80%;" cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th style="width:15%">Brand</th>
+                <th style="width:15%">Model</th>
+                <th style="width:25%">Viewport</th>
+                <th style="width:20%">Resolution</th>
+                <th style="width:15%">D.size</th>
+                <th style="width:10%">DPI</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><select id="Brand" class="filter"></select></td>
+                <td><select id="Model"></select></td>
+                <td><select id="Viewport" class="filter"></select></td>
+                <td><select id="Resolution" class="filter"></select></td>
+                <td><select id="D_size" class="filter"></select></td>
+                <td><select id="DPI" class="filter"></select></td>
+            </tr>
+            <tr>
+                <td><button value="0" class="selected">Vertical</button></td>
+                <td><button value="1">Horizontal</button></td>
+                <td colspan="2"><input id="adjust_for_scroll" type="checkbox" checked="checked"><label for="adjust_for_scroll">Adjust for Vertical Scroll</label></td>
+                <td style="text-align:right">Scale:</td>
+                <td id="transform_scale">100%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="ifh">
+        <script> document.writeln('<iframe src="/?' + new Date() + '"></iframe>')</script>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>
+
+var Emulator = {
+
+    _cache: {
+        devices: false
+    },
+
+    sort: {
+        by_name: function (_a,_b,a,b) { 
+            a = $(_a).text().toUpperCase();
+            b = $(_b).text().toUpperCase();
+            if (a == b ) return $(_a)[0].selectedIndex - $(_b)[0].selectedIndex;
+            return a > b ? 1 : 0;
+        },
+
+        by_resolution: function (_a, _b, a, b) {
+            a = parseInt( $(_a).text().split('x')[0] );
+            b = parseInt($(_b).text().split('x')[0]);
+            if (a == b) return $(_a)[0].selectedIndex - $(_b)[0].selectedIndex;
+            return a - b;
+        },
+
+        by_size: function (_a, _b, a, b) {
+            a = parseFloat($(_a).text().split('x')[0]);
+            b = parseFloat($(_b).text().split('x')[0]);
+            if (a == b) return $(_a)[0].selectedIndex - $(_b)[0].selectedIndex;
+            return a - b;
+        },
+
+        by_dpi: function (_a, _b, a, b) {
+            a = parseInt($(_a).text());
+            b = parseInt($(_b).text());
+            if (a == b) return $(_a)[0].selectedIndex - $(_b)[0].selectedIndex;
+            return a - b;
+        }
+    }, // sorts
+
+    utilities: {
+
+        ExternalLoadSpinner: function (isBlock) {
+            if (isBlock) $('div', $('#jsonLoader').css('display', 'block')).addClass('loader');
+            else $('div', $('#jsonLoader').css('display', '')).removeClass('loader');
+        },
+
+
+
+        findFirstIndex: function ($o, val) {
+            $o = $('option', $o);
+            for ( i = 0; i < $o.length; i++ ) if ( $($o[i]).text() == val) return i;
+            return -1;
+        },
+
+        loadDevices: function () {
+            // Emulator.utilities.ExternalLoadSpinner(true);
+            $.ajax({
+                url: '/devices.json',
+                dataType: 'json',
+                complete: function (response) {
+                    setTimeout(function () {
+                        Emulator.utilities.ExternalLoadSpinner(false);
+                    }, 100);
+                },
+                success: function (response) {
+                    Emulator._cache.devices = response;
+                    Emulator._ini();
+                }
+            });
+        }
+    }, // utilities
+
+    _ini: function () {
+
+        var w, h, ww, wh, ratio, i, name, named, id, $o, tmp, luq,
+            slist = {
+                Brand: Emulator.sort.by_name,
+                Model: Emulator.sort.by_name,
+                Viewport: Emulator.sort.by_resolution,
+                Resolution: Emulator.sort.by_resolution,
+                D_size: Emulator.sort.by_size,
+                DPI: Emulator.sort.by_dpi
+            };
+
+        for (i = 0; i < Emulator._cache.devices.length; i++) {
+            for (name in Emulator._cache.devices[i]) {
+                id = name.replace('.', '_');
+                $('#' + id).append('<option id="dd_' + i + '">' + Emulator._cache.devices[i][name] +
+                    ((name == 'Model') ? ', ' + Emulator._cache.devices[i]['Brand'] : '') + '</option>');
+            }
+        }
+
+        for (name in slist) {
+            id = name.replace('.', '_');
+            $o = $('#' + id);
+            var opt = $('option', $o);
+            opt.sort(slist[name]);
+            for (luq = i = 0; i < opt.length - 1; i++) {
+                if ($(opt[i]).text() == $(opt[i + 1]).text()) {
+                    $(opt[i + 1]).addClass('duplicate').attr('data-uptr', luq);
+                } else luq = i + 1;
+            }
+            $o.html('').append(opt);
+        }
+
+        $('button').click(function () {
+            $('button').removeClass('selected');
+            $(this).addClass('selected');
+            $('#Viewport').trigger('change');
+        })
+
+        $('input').change(function () {
+            $('#Viewport').trigger('change');
+        });
+
+        $('select').change(function () {
+
+            $o = $(this);
+            id = $('option:selected', $o).prop('id');
+            tmp = parseInt(id.split('_')[1]);
+
+            for (name in slist) {
+                if (name != $o.prop('id'))
+                    $('#' + name)[0].selectedIndex =
+                        Emulator.utilities.findFirstIndex($('#' + name), $('#' + id, $('#' + name)).text());
+            }
+
+            // viewport update
+            tmp = $('option:selected', $('#Viewport')).text().split('x');
+
+            if (parseInt($('button.selected').val())) { w = tmp[1]; h = tmp[0]; }
+            else { h = tmp[1]; w = tmp[0]; }
+
+            h = parseInt(h);
+            w = parseInt(w) + (($('#adjust_for_scroll').is(':checked')) ? 22 : 0); // for scroll bars
+            ww = $(window).width();
+            wh = $(window).height();
+
+            if (ww - 60 < w || wh - 60 < h) {
+                ratio = 1;
+                if (ww - 200 < w) ratio = (ww - 200) / w;
+                if (wh - 300 < h * ratio) ratio = (wh - 300) / h;
+            } else ratio = 1;
+
+            $("#ifh").css({
+                height: h + 'px',
+                width: w + 'px',
+                'max-height': h + 'px',
+                'max-width': w + 'px',
+                'min-height': h + 'px',
+                'min-width': w + 'px',
+                top: ((wh / 2) - (h / 2)) + 'px',
+                left: ((ww / 2) - (w / 2)) + 'px',
+                transform: 'scale( ' + ratio + ', ' + ratio + ')'
+            });
+
+            $('#transform_scale').html(Number.parseFloat(100 * ratio).toPrecision(4) + '%');
+        });
+
+        $('#Viewport').trigger('change');
+    },
+    ini: function () {
+        Emulator.utilities.loadDevices();
+    }
+}
+
+$(function () {
+    Emulator.ini();
+});
+</script>
+</body>
+</html>
